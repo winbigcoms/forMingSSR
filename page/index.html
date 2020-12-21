@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>데모 페이지입나다.</h1>
+    <input type="text" id="dataInput"/>
+    <button id="goData"></button>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    const btn = document.querySelector("#goData");
+    const input = document.querySelector("#dataInput");
+
+    btn.addEventListener("click",()=>{
+      console.log("1")
+      axios.post("http://localhost:9000/receive",input.value);
+    })
+  </script>
+</body>
+</html>
